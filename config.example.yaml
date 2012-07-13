@@ -1,0 +1,13 @@
+# Configuration file for the LawyerUp-HittheGym-DeleteFacebook reddit bot
+---
+
+account:
+  username: 'LU-HG-DF-bot'
+  password: ''
+
+reddit: 'r/circlejerk/new'
+seen_file: 'seen.txt'
+comment_file: 'comment.md'
+
+server:
+  port: 8081

@@ -15,10 +15,10 @@ class LUHGDFbot < RedditBot
 
     comment = get_comment
     $logger.info "Looking for comments, #{results.length} found!..."
-    results.take(5).each do |r|
+    results.each do |r|
       next if @seen.include? r.id
       @seen[r.id] = true
-
+      
       next unless r.title =~ /(((girl)|(boy))friend)|(wife)|(husband)/
       $logger.info "Commenting on #{r.id} [#{r.title}]..."
 

@@ -22,7 +22,7 @@ class LUHGDFbot < RedditBot
       next unless r.title =~ /(((girl)|(boy))friend)|(wife)|(husband)/
       $logger.info "Commenting on #{r.id} [#{r.title}]..."
 
-       sleep(60 * $config[wait]) if($config[wait])
+       sleep(60 * $config['wait']) if($config['wait'])
        r.add_comment(comment)
     end
     $logger.info "Done!"

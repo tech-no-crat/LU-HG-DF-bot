@@ -10,7 +10,7 @@ class LUHGDFbot < RedditBot
   end
 
   def run
-    results = @r.browse @reddit 
+    results = @r.browse @reddit, :limit => 1000
     return unless results
 
     comment = get_comment
@@ -22,8 +22,8 @@ class LUHGDFbot < RedditBot
       next unless r.title =~ /(((girl)|(boy))friend)|(wife)|(husband)/
       $logger.info "Commenting on #{r.id} [#{r.title}]..."
 
-      sleep(10 * 60)
-      r.add_comment(comment)
+       sleep(60 * $config[wait]) if($config[wait])
+       r.add_comment(comment)
     end
     $logger.info "Done!"
 

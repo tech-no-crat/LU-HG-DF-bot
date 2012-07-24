@@ -8,6 +8,7 @@ account:
 reddit: 'r/circlejerk/new'
 seen_file: 'seen.txt'
 comment_file: 'comment.md'
+wait: 10
 
 server:
   port: 8081
